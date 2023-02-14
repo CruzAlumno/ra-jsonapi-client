@@ -111,6 +111,16 @@ export default (apiUrl, userSettings = {}) => (type, resource, params) => {
 
     case GET_MANY: {
       const query = stringify({
+        'filter[id]': params.ids,
+      }, { arrayFormat: settings.arrayFormat });
+      options.method = 'DELETE';
+
+      url = `${apiUrl}/${resource}?${query}`;
+      break;
+    }
+
+    case GET_MANY: {
+      const query = stringify({
         [`filter[${settings.getManyKey}]`]: params.ids,
       }, { arrayFormat: settings.arrayFormat });
 
