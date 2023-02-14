@@ -46,6 +46,6 @@
     "deepmerge": "^2.1.1",
     "qs": "^6.5.2",
     "ra-data-json-server": "^4.6.2",
-    "ra-jsonapi-client": "CruzAlumno/ra-jsonapi-client#main"
+    "ra-jsonapi-client": "CruzAlumno/ra-jsonapi-client#master"
   }
 }
